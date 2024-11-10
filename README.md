@@ -8,7 +8,7 @@ Welcome to **Tic-Tac-Toe**! This is a simple, interactive two-player game where 
 
 - **Two Player Gameplay:** Play against a friend in a traditional 3x3 grid.
 - **Game History:** View the results of your past games and keep track of wins, losses, and ties.
-- **Customizable History:** Sort through previous games and review the moves made during each game.
+- **Customizable History:** Sort through previous games and see the winner.
 
 ---
 
@@ -17,7 +17,6 @@ Welcome to **Tic-Tac-Toe**! This is a simple, interactive two-player game where 
 - **React:** For building the user interface and managing game state.
 - **JavaScript:** For the game logic and functionality.
 - **CSS:** For styling the app and making it visually appealing.
-- **HTML:** For the basic structure (this is included by default with React).
 
 ---
 
