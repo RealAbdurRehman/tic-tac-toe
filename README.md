@@ -25,7 +25,7 @@ Welcome to **Tic-Tac-Toe**! This is a simple, interactive two-player game where 
 ### Home / Game View
 *This is where the game is played, and players take turns to mark X's and O's.*
 
-![Home / Game View](path/to/your/image1.png)
+![Home / Game View]([path/to/your/image1.png](https://files.slack.com/files-tmb/T0266FRGM-F07V7MVF0GP-e09a7561a3/screenshot_2024-11-10_at_22-07-32_tic-tac-toe_720.png))
 
 ---
 
