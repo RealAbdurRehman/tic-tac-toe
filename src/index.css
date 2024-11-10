@@ -1,0 +1,508 @@
+/* Custom Properties */
+
+:root {
+    --dark-pink: #FFD2DA;
+    --light-pink: #FDECEF;
+    --shadow: #F1C8CF;
+    --black: #444;
+    --red: #F34954;
+    --light-red: #F89EA9;
+    --white: #FFF;
+    --yellow: #F9D459;
+}
+
+:focus {
+    outline: 5px solid #005fcc;
+    outline-offset: 4px;
+    z-index: 1000;
+}
+
+input:focus {
+    outline-color: var(--red);
+}
+
+::selection {
+    color: var(--black);
+    background-color: var(--red);
+}
+
+.field-one label::selection, .field-two label::selection {
+    color: var(--red);
+    background-color: var(--yellow);
+}
+
+/* Styles */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px 0;
+    background-color: var(--dark-pink);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+main {
+    margin: auto;
+    padding: 30px 70px;
+    width: 90vw;
+    max-width: 1658px;
+    min-height: 886px;
+    background-color: var(--light-pink);
+    border-radius: 30px;
+    box-shadow: 0 0 20px 5px var(--shadow);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: -10px;
+}
+
+h1 span {
+    color: var(--red);
+}
+
+/* Top */
+
+.top {
+    display: flex;
+    justify-content: space-around;
+    align-items: last baseline;
+}
+
+.top button {
+    margin-left: 100px;
+}
+
+/* Game Stats */
+
+.game-stats {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    place-items: center;
+}
+
+.player-card {
+    background-color: var(--white);
+    min-width: 225px;
+    max-width: 500px;
+    height: 210px;
+    padding: 30px 50px;
+    border-radius: 60px;
+    border: 2px solid var(--light-red);
+    text-align: center;
+    box-shadow: 0 10px 10px var(--dark-pink);
+    position: relative;
+}
+
+.marker {
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75px;
+    height: 75px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+    box-shadow: 0 5px 1px var(--light-pink);
+    display: grid;
+    place-content: center;
+}
+
+.marker svg {
+    width: 40px;
+    fill: var(--red);
+}
+
+.player-card h2 {
+    margin-top: 40px;
+    color: var(--black);
+    font-size: 1.75rem;
+    font-weight: 900;
+}
+
+.player-role {
+    background-color: var(--red);
+    border-radius: 50px;
+    margin: 20px auto 0 auto;
+    width: 90%;
+    height: 40%;
+    display: grid;
+    place-content: center;
+}
+
+.player-role img {
+    width: 80px;
+}
+
+/* Main Game */
+
+.main-game {
+    width: fit-content;
+    display: grid;
+    grid-template: repeat(3, 125px) / repeat(3, 125px);
+    padding: 10px;
+    border-radius: 30px;
+    border: 4px dashed var(--red);
+    background-color: var(--white);
+    margin: auto;
+}
+
+.main-game button {
+    border: none;
+    background-color: var(--red);
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+.main-game button:nth-of-type(1) {
+    border-top-left-radius: 30px;
+}
+
+.main-game button:nth-of-type(1), .main-game button:nth-of-type(2), .main-game button:nth-of-type(4), .main-game button:nth-of-type(5) {
+    border-bottom: 2px dashed var(--light-pink);
+    border-right: 2px dashed var(--light-pink);
+}
+
+.main-game button:nth-of-type(3), .main-game button:nth-of-type(6) {
+    border-bottom: 2px dashed var(--light-pink);
+}
+
+.main-game button:nth-of-type(3) {
+    border-top-right-radius: 30px;
+}
+
+.main-game button:nth-of-type(7), .main-game button:nth-of-type(8) {
+    border-right: 2px dashed var(--light-pink);   
+}
+
+.main-game button:nth-of-type(7) {
+    border-bottom-left-radius: 30px;
+}
+
+.main-game button:nth-of-type(9) {
+    border-bottom-right-radius: 30px;
+}
+
+.main-game button img {
+    width: 140px;
+    margin: auto;
+}
+
+.main-game button:disabled {
+    cursor: default;
+}
+
+/* Turn Displayer */
+
+.turn-display {
+    width: fit-content;
+    margin: 75px auto 0 auto; 
+    text-align: center;
+    color: var(--red);
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 1em 2em;
+    border-radius: 50px;
+    background-color: var(--yellow);
+}
+
+/* Settings Section */
+
+.settings-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: "player1 reset player2";;
+    margin-top: 40px;
+}
+
+.field-one {
+    grid-area: player1;
+}
+
+
+.settings-section button {
+    grid-area: reset;
+}
+
+.reset-btn {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--yellow);
+    border: none;
+    border-radius: 50px;
+    padding: 0.5em 1.5em;
+    background-color: var(--red);
+    cursor: pointer;
+    box-shadow: 0 6px 1px var(--dark-pink);
+    transition: all 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.reset-btn:hover {
+    transform: scale(1.05);
+    color: var(--red);
+    background-color: var(--yellow);
+}
+
+.reset-btn:active {
+    opacity: 0.75;
+}
+
+.field-two {
+    margin-left: auto;
+    grid-area: player2;
+}
+
+.field-one, .field-two {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.field-one label, .field-two label {
+    color: var(--red);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.field-one input, .field-two input {
+    color: var(--black);
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 0.25em 1em;
+    border: none;
+    width: 300px;
+}
+
+/* Win Window Section */
+
+.win-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 6px 6px 1px var(--dark-pink);
+}
+
+.win-window h2 {
+    color: var(--black);
+    font-size: 1.7rem;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.reset-btn-2 {
+    color: var(--red);
+    background-color: var(--yellow);
+}
+
+.reset-btn-2:hover {
+    color: var(--yellow);
+    background-color: var(--red);
+}
+
+/* History Section */
+
+.history {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 700px;
+    padding: 20px 30px;
+    background-color: var(--white);
+    border-radius: 30px;
+    overflow: scroll;
+    box-shadow: 6px 6px 1px var(--dark-pink);
+}
+
+.unavailable-container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+.unavailable-txt {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.unavailable-txt span {
+    color: var(--red);
+}
+
+.unavailable-container h3 span {
+    font-weight: 900;
+    color: var(--red);
+}
+
+.history-block {
+    text-align: center;
+    padding: 0 20px 10px 10px;
+    border-bottom: 4px solid var(--red);
+}
+
+.history-block h2 {
+    color: var(--black);
+    font-size: 1.75rem;
+    font-weight: 900;
+}
+
+.history-block h2 span {
+    color: var(--red);
+}
+
+.history h3 {
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+.clear-history-btn {
+    position: sticky;
+    bottom: 0;
+    left: 100%;
+    top: 100%;
+}
+
+/* Buttons */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.btn svg {
+    width: 25px;
+    fill: var(--yellow);
+}
+
+.btn:hover svg {
+    fill: var(--red)
+}
+
+.btn-2 svg {
+    fill: var(--red);
+}
+
+.btn-2:hover svg {
+    fill: var(--yellow);
+}
+
+/* Media Queries */
+
+@media (max-width: 1117px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .settings-section {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 2fr;
+        grid-template-areas: 
+            "reset reset"
+            "player1 player2";
+            row-gap: 20px;
+        }
+        
+        .field-two, .field-one {
+        margin: none;
+    }
+
+    .setting-reset {
+        margin: auto;
+        width: 171px;
+    }
+}
+
+@media (max-width: 873px) {
+    .top {
+        margin-top: 65px;
+    }
+}
+
+@media (max-width: 869px) {
+    .settings-section {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "reset"
+            "player1"
+            "player2";
+        row-gap: 20px;
+    }
+
+    .field-two, .field-one {
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .top {
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px
+    }
+
+    .top button {
+        margin-right: 100px;
+    }
+}
+
+@media (max-width: 461px) {
+    .turn-display {
+        width: 171px;
+        overflow: hidden;
+        white-space: no-wrap;
+        text-overflow: ellipsis;
+        font-size: 1.2rem;
+        padding: 0.5em 1em;
+    }
+}
