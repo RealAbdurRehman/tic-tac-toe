@@ -1,11 +1,10 @@
 export default function History({gameHistory, clearHistory}) {
-    const historyElements = gameHistory.map(({player1, player2, winner, date}, index) => {
+    const historyElements = gameHistory.map(({player1, player2, winner}, index) => {
         winner = winner ? winner : "The player with no name";
         return (
             <div key={index} className="history-block">
                 <h2><span>{player1 ? player1 : "Player 1"}</span> VS <span>{player2 ? player2 : "Player 2"}</span></h2>
                 <h3>{winner !== "none" ? `${winner} won!` : "It's a draw!"}</h3>
-                <p>{date.toDateString()}</p>
             </div>
         )
     })

@@ -97,8 +97,7 @@ export default function() {
                 {
                     player1: settings.player1,
                     player2: settings.player2,
-                    winner: winner.includes('draw') ? 'none' : winner.includes(settings.player1) ? settings.player1 : settings.player2,
-                    date: new Date()
+                    winner: winner.includes('draw') ? 'none' : winner.includes(settings.player1) ? settings.player1 : settings.player2
                 }
             ];
             setGameHistory(newGameHistory);
