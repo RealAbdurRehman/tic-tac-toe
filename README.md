@@ -41,12 +41,3 @@ Welcome to **Tic-Tac-Toe**! This is a simple, interactive two-player game where 
 *Here you can view the history of past games, including the results and move details.*
 
 ![History Screen](path/to/your/image3.png)
-
----
-
-## How to Run the Project
-
-1. Clone the repository to your local machine:
-
-   ```bash
-   git clone https://github.com/your-username/tic-tac-toe.git
