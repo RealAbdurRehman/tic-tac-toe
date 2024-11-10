@@ -25,18 +25,19 @@ Welcome to **Tic-Tac-Toe**! This is a simple, interactive two-player game where 
 ### Home / Game View
 *This is where the game is played, and players take turns to mark X's and O's.*
 
-![Home / Game View]([path/to/your/image1.png](https://files.slack.com/files-tmb/T0266FRGM-F07V7MVF0GP-e09a7561a3/screenshot_2024-11-10_at_22-07-32_tic-tac-toe_720.png))
+![Demo](https://cloud-jjlxqyuwz-hack-club-bot.vercel.app/0screenshot_2024-11-10_at_22-07-32_tic-tac-toe.png)
 
 ---
 
 ### Win Screen
 *This screen appears when one player wins the game, displaying the result.*
 
-![Win Screen](path/to/your/image2.png)
+![Demo](https://cloud-7peg7mg7s-hack-club-bot.vercel.app/0screenshot_2024-11-10_at_22-07-54_tic-tac-toe.png)
 
 ---
 
 ### History Screen
 *Here you can view the history of past games, including the results and move details.*
 
-![History Screen](path/to/your/image3.png)
+![Demo](https://cloud-21js0eifz-hack-club-bot.vercel.app/0screenshot_2024-11-10_at_22-10-38_tic-tac-toe.png)
+![Demo](https://cloud-h7jz4lcpr-hack-club-bot.vercel.app/0screenshot_2024-11-10_at_22-10-22_tic-tac-toe.png)
